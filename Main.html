@@ -1,0 +1,208 @@
+<html>
+  <head>
+    <script type="text/javascript">
+        var portraitLock = screen.mozLockOrientation("portrait");
+        if (portraitLock) {
+        console.log("Orientation locked to portrait");
+          }
+      </script>
+    <script type="text/javascript">
+
+    var lockOrientation = screen.lockOrientation || screen.mozLockOrientation || screen.msLockOrientation;
+/*
+if (lockOrientation("landscape-primary")) {
+  // orientation was locked
+} else {
+  // orientation lock failed
+} */
+
+if (lockOrientation(["portrait"])) {
+  // orientation was locked
+} else {
+  // orientation lock failed
+}
+
+
+    function doOnOrientationChange()
+      {
+        screen.mozLockOrientation("portrait");
+        switch(window.orientation) 
+        {  
+          case -90:                 
+                 document.getElementById("portrait").style.display="block";
+                 break;
+          case 90:              
+                document.getElementById("portrait").style.display="block";                 
+                break;
+         default:                   
+                document.getElementById("lportrait").style.display="none";
+                break;                            
+        }
+      }
+
+      //Listen to orientation change
+      window.addEventListener('orientationchange', doOnOrientationChange);  
+/*
+
+      if(window.innerHeight > window.innerWidth){
+    document.getElementsByTagName("body").style.transform = "rotate(90deg)";*/
+}
+
+    </script>
+    <style type="text/css">
+
+          
+         
+        /* */ 
+         .an1{
+      -moz-animation-duration: 0.5s;
+      -webkit-animation-duration: 0.5s;
+      -moz-animation-name: slidein;
+      -webkit-animation-name: slidein;
+    }
+    
+a {
+    text-decoration: none;
+    text-align: center;
+    height: 20px;
+    color: white;
+    background-color: tomato;
+    padding: 0px;
+    border-radius: 3px;
+    display: inline-block;
+    width:200px
+
+
+  }
+
+@media all and (orientation:portrait) {
+  body {
+    background: #79be6a;
+  }
+  .demo-wrappper .landscape {
+    display: none;
+  }
+}
+
+
+
+
+
+    @-moz-keyframes slidein {
+      from {
+        margin-left:100%;
+        width:100%
+      }
+      
+      to {
+        margin-left:0%;
+        width:100%;
+      }
+    }
+    
+    @-webkit-keyframes slidein {
+      from {
+        margin-left:100%;
+        width:100%
+      }
+      
+      to {
+        margin-left:0%;
+        width:100%;
+      }
+    }
+        /**/
+
+        /* */ 
+         .an2{
+      -moz-animation-duration: 0.5s;
+      -webkit-animation-duration: 0.5s;
+      -moz-animation-name: slidein1;
+      -webkit-animation-name: slidein1;
+    }
+    
+    @-moz-keyframes slidein1 {
+      from {
+        margin-left:-100%;
+        width:-100%
+      }
+      
+      to {
+        margin-left:0%;
+        width:-100%;
+      }
+    }
+    
+    @-webkit-keyframes slidein1 {
+      from {
+        margin-left:-100%;
+        width:-100%
+      }
+      
+      to {
+        margin-left:0%;
+        width:-100%;
+      }
+    }
+        /**/
+
+        /* */
+          body a {
+            
+            text-decoration: none;
+            width: 200px;
+          }
+
+          h3{
+            text-align: center;
+          }
+          body{
+            font-size: 14px;
+          }
+        
+
+       
+
+      </style>
+      <link rel="stylesheet" href="astyle.css" />
+  </head>
+
+  <body onload="doOnOrientationChange();" id="landscape"><br>
+
+  <div align="center" >
+    <span align="center" style="font-weight:light; font-size:42px;">
+      Firefox
+    </span>
+    <br>
+    <span align="center" style="font-weight:light; font-size:18px;">
+      Student Ambassador Kit
+    </span>
+    <br>
+<img src="fsa.png" height="100px"/>
+    <br>
+    <span align="center" style="color: #1f8aad;">Please select an option</span><br>
+<div style="line" ></div>
+
+<span class="an1"> 
+  <a href="mabout.html" class="button" style="background-color: #f7921e; font-weight:bold;" >
+   ClubLead Training
+</a>
+</span>
+<br>
+<span class="an2">
+<a href="mlist.html" class="button" style="background-color: #c13832; font-weight:bold;">
+   Moz List
+</a>
+</span>
+<br>
+<span class="an1">
+  <a href="mnote.html" class="button" style="background-color: #0095dd; font-weight:bold;">
+  Moz Notes
+</a>
+</span>
+<footer>
+By:  vsskanand
+</footer>
+</div>
+  
+</html>
