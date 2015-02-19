@@ -1,0 +1,17 @@
+{
+  "version": "0.1",
+  "name": "FSA Kit",
+  "description": "A must app for every Firefox Student Ambassador and aspiring Firefox Club Leads.s",
+  "launch_path": "/Main.html",
+  "icons": {
+    "128": "/logo.png"
+  },
+  "orientation": [
+    "portrait"
+  ],
+  "developer": {
+    "name": "vsskanand",
+    "url": "http://vsskanandwordpress.com"
+  },
+  "default_locale": "en"
+}
