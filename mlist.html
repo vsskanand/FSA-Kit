@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <title>CodePen - To Do List</title>
+
+    <link rel="stylesheet" href="imp1/css/style.css" media="screen" type="text/css" />
+    <link rel="stylesheet" href="astyle.css" />
+
+    <style type="text/css">
+    todoapp{position: absolute;
+      padding-left: 0px;
+
+    }
+
+    a {
+    text-decoration: none;
+    text-align: center;
+    height: 30px;
+    color: white;
+    background-color: tomato;
+    padding: 5px;
+    border-radius: 3px;
+    display: inline-block;
+    width:200px
+
+
+  }
+
+    </style>
+    <link href='http://fonts.googleapis.com/css?family=Bitter:400,700,400italic' rel='stylesheet' type='text/css'>
+
+
+</head>
+
+<body>
+
+    <script src="imp1/js/json2.js"></script>
+  <script src="imp1/js/jquery.js"></script>
+  <script src="imp1/js/underscore.js"></script>
+  <script src="imp1/js/backbone.js"></script>
+  <script src="imp1/js/backbone.localStorage.js"></script>
+
+<!--
+&nbsp;<a href="#" onclick="toggle_visibility('dragme');" style="color:white;">Toggle To Do List</a>
+-->
+        <div>
+
+		 <div ><!--<a href="#" id="closeTDL"  onclick="toggle_visibility('dragme');" style="color:white;background-color:transparent;text-decoration:none;">X&nbsp;</a>-->
+
+  <div id="todoapp">
+
+  <h2 align="center">MozList</h2>
+	<section id="main">
+
+      <ul id="todo-list"></ul>
+
+    </section>
+    <header>
+
+      <input id="new-todo" type="text" placeholder="Write things to be done and hit 'Enter'">
+
+    </header>
+
+    <footer>
+
+      <a id="clear-completed" >Clear completed</a>
+      <div id="todo-count"></div>
+    </footer>
+
+  </div>
+
+ <!-- Templates -->
+
+  <script type="text/template" id="item-template">
+    <div class="view">
+
+      <label><input class="toggle" type="checkbox" <%= done ? 'checked="checked"' : '' %> /><i></i><span title="Double-click to edit a todo."><%- title %></span></label>
+      <a class="destroy">&minus;</a>
+    </div>
+    <input class="edit" type="text" value="<%- title %>" />
+  </script>
+
+  <script type="text/template" id="stats-template">
+    <% if (done) { %>
+      <a id="clear-completed">Clear <%= done %> completed <%= done == 1 ? 'item' : 'items' %></a>
+    <% } %>
+    <div class="todo-count"><b><%= remaining %></b> <%= remaining == 1 ? 'item' : 'items' %> left</div>
+  </script>
+
+      </div>     
+      <br><br>
+      <!--
+<div align="center" class="an1">
+    <form action="Main.html" >
+      <input class="button button-big"  style="background-color: #0095dd; font-weight:bold;" type="submit" value="Main Menu">
+  </form>
+</div> -->
+
+<div align="center" class="an1">
+    <a href="Main.html" style="font-weight:bold;">Main Menu
+  </a>
+</div>
+
+
+
+<script type="text/javascript"
+    src="imp1/js/jquery.min.js"></script>
+<script type="text/javascript"
+    src="imp1/js/jquery-ui.js"></script>
+ <script>
+  </script>
+
+  <script src="imp1/js/index.js"></script>
+
+</body>
+
+</html>
